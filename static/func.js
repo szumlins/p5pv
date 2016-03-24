@@ -40,9 +40,9 @@ $(document).ready(function() {
 		});	
 	}, 10000000);			
 
-	setInterval( function () {
-		jobs_table.ajax.reload();
-	}, 3000 );    
+//	setInterval( function () {
+//		jobs_table.ajax.reload();
+//	}, 3000 );    
 	
    $('#jobs tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
