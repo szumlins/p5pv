@@ -1,0 +1,40 @@
+<!doctype html>
+<head>
+	<script src="{{ url_for('static', filename='jquery-2.2.0.min.js') }}"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='DataTables/datatables.css') }}"/>
+	<script type="text/javascript" src="{{ url_for('static', filename='DataTables/datatables.js') }}"></script>		
+	<script src="{{ url_for('static', filename='func.js') }}"></script>
+	<style type="text/css" class="init">
+		td.details-control {
+			background: url('{{ url_for('static', filename='images/btn_add.png') }}') no-repeat center center;
+			cursor: pointer;
+		}
+		tr.shown td.details-control {
+			background: url('{{ url_for('static', filename='images/btn_rem.png') }}') no-repeat center center;		
+		}	
+
+	</style>
+	<title>P5 Process Viewer</title>
+</head>
+<body>
+<table id="info" width="100%">
+	<tr>
+		<th valign="middle" align="left"><img src="{{ url_for('static', filename='images/presstore_24.png') }}"> Process Viewer</th>
+		<th valign="middle" id="datetime" align="right"></th>
+	</tr>
+</table>
+<table id="jobs" class="display" cellspacing="0" width="100%">
+	<thead>
+		<tr>
+			<th></th>
+			<th></th>
+			<th>Job</th>
+			<th>Job Type</th>
+			<th>Description</th>
+			<th>Start Date</th>
+			<th>Start Time</th>
+		</tr>
+	</thead>
+</table>
+    
+</body>
